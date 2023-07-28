@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/variable.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/sidebar.css">
+  <link rel="stylesheet" href="./assets/css/step.css">
+  <link rel="stylesheet" href="./assets/css/step-1.css">
+  <link rel="stylesheet" href="./assets/css/step-2.css">
+  <link rel="stylesheet" href="./assets/css/step-3.css">
+  <link rel="stylesheet" href="./assets/css/step-4.css">
+  <link rel="stylesheet" href="./assets/css/step-5.css">
+</head>
+<body>
+  <main class="main">
+    <section class="sidebar">
+      <div class="step">
+        <p class="step__number">1</p>
+        <div class="step__right">
+          <p class="step__step">Step 1</p>
+          <p class="step__name">Your info</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step__number">2</p>
+        <div class="step__right">
+          <p class="step__step">Step 2</p>
+          <p class="step__name">Select plan</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step__number">3</p>
+        <div class="step__right">
+          <p class="step__step">Step 3</p>
+          <p class="step__name">Add-ons</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step__number">4</p>
+        <div class="step__right">
+          <p class="step__step">Step 4</p>
+          <p class="step__name">Summary</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="step-1">
+        <h2 class="step__title">Personal info</h2>
+        <p class="step__para">Please provide your name, email address, and phone number.</p>
+        <form class="form">
+          <fieldset class="form__group">
+            <label class="form__label">Name</label>
+            <input class="form__input" type="text" placeholder="e.g. Stephen King">
+          </fieldset>
+          <fieldset class="form__group">
+            <label class="form__label">Email Address</label>
+            <input class="form__input" type="email" placeholder="e.g. stephenking@lorem.com">
+          </fieldset>
+          <fieldset class="form__group">
+            <label class="form__label">Phone Number</label>
+            <input class="form__input" type="text" placeholder="e.g. +1 234 567 890">
+          </fieldset>
+        </form>
+        <button class="step__next">Next Step</button>
+      </div>
+      <div class="step-2">
+        <h2 class="step__title">Select your plan</h2>
+        <p class="step__para">You have the option of monthly or yearly billing.</p>
+        <div>
+          <div>
+            <img src="" alt="">
+            <div>
+              <p>Arcade</p>
+              <p>$9/mo</p>
+            </div>
+          </div>
+          <div>
+            <img src="" alt="">
+            <div>
+              <p>Advanced</p>
+              <p>$12/mo</p>
+            </div>
+          </div>
+          <div>
+            <img src="" alt="">
+            <div>
+              <p>Pro</p>
+              <p>$15/mo</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>Monthly</p>
+          <p>Yearly</p>
+        </div>
+        <div>
+          <button class="step__back">Go Back</button>
+          <button class="step__next">Next Step</button>
+        </div>
+      </div>
+      <div class="step-3">
+        <h2 class="step__title">Pick add-ons</h2>
+        <p class="step__para">Add-ons help enhance your gaming experience.</p>
+        <div>
+          <div>
+            <input type="checkbox" value="service" id="service">
+            <div>
+              <p>Online service</p>
+              <p>Access to multiplayer games</p>
+            </div>
+            <p>+$1/mo</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" value="storage" id="storage">
+            <div>
+              <p>Larger storage</p>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <p>+$2/mo</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" value="service" id="service">
+            <div>
+              <p>Customizable Profile</p>
+              <p>Custom theme on your profile</p>
+            </div>
+            <p>+$2/mo</p>
+          </div>
+        </div>
+        <div>
+          <button class="step__back">Go Back</button>
+          <button class="step__next">Next Step</button>
+        </div>
+      </div>
+      <div class="step-4">
+        <h2 class="step__title">Finishing up</h2>
+        <p class="step__para">Double-check everything looks OK before confirming.</p>
+        <div>
+          <p>Total (per month/year)</p>
+        </div>
+        <div>
+          <button class="step__back">Go Back</button>
+          <button class="step__next">Next Step</button>
+        </div>
+      </div>
+      <div class="step-5">
+        <img src="./assets/images/icon-thank-you.svg">
+        <p>Thank you!</p>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun 
+          using our platform. If you ever need support, please feel free 
+          to email us at support@loremgaming.com.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

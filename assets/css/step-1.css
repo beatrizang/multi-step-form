@@ -1,0 +1,15 @@
+.step__title{
+    color: var(--marine-blue);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.step__para{
+    color: var(--cool-gray);
+    padding: 1rem 0;
+}
+
+.form__group{
+    display: flex;
+    flex-direction: column;
+}
