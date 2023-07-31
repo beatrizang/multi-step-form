@@ -1,3 +1,39 @@
 .step-3{
-    display: none;
+    padding: 0rem 4rem;
+}
+
+.check__box{
+    align-items: center;
+    border: 1px solid var(--light-gray);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.check__check{
+    margin-right: 1rem;
+}
+
+.check__left{
+    align-items: center;
+    display: flex;
+}
+
+.check__title{
+    color: var(--marine-blue);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.check__desc{
+    color: var(--cool-gray);
+}
+
+.check__price{
+    color: var(--purplish-blue);
+    font-weight: 500;
+    margin-left: 5rem;
 }
