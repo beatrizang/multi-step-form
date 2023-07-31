@@ -1,3 +1,55 @@
 .step-2{
-    display: none;
+    padding: 0rem 4rem;
+}
+
+.cards{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    border: 1px solid var(--light-gray);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-right: 1rem;
+    padding: 1rem;
+    width: 120px;
+}
+
+.card__img{
+    width: 40px;
+}
+
+.card__text{
+    margin-top: 3rem;
+}
+
+.card__title{
+    color: var(--marine-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__price{
+    color: var(--cool-gray);
+}
+
+.step__buttons{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.step__back{
+    color: var(--cool-gray);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.step__back:hover{
+    color: var(--marine-blue);
 }

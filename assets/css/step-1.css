@@ -1,5 +1,6 @@
 .step-1{
-    padding: 3rem;
+    display: none;
+    padding: 0rem 4rem;
 }
 .step__title{
     color: var(--marine-blue);
@@ -44,5 +45,14 @@
     cursor: pointer;
     font-weight: 500;
     padding: 0.8rem 1rem;
+    
+}
+
+.step__next:hover{
+    background: var(--light-marine-blue);
+}
+
+.step__next__1{
     margin-top: 5rem;
+    margin-left: 350px;
 }

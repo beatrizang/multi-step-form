@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 :root{
+    --light-marine-blue: hsla(213, 95%, 25%, 0.927);
     --marine-blue: hsl(213, 96%, 18%);
     --purplish-blue: hsl(243, 100%, 62%);
     --pastel-blue: hsl(228, 100%, 84%);
@@ -18,4 +19,6 @@
 body{
     font-family: var(--ff-ubuntu);
 }
+
+
 
