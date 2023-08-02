@@ -10,6 +10,10 @@ const cardArcade = document.getElementById('card-arcade');
 const cardAdvanced = document.getElementById('card-advanced');
 const cardPro = document.getElementById('card-pro');
 
+const checkService = document.getElementById('check-service');
+const checkStorage = document.getElementById('check-storage');
+const checkCustomizable = document.getElementById('check-customizable');
+
 let cardSelected;
 
 $(document).ready(function(){
@@ -51,33 +55,21 @@ $('#btn-back2').click(function(){
 });
 
 $('#card-arcade').click(function(){
-    this.style.background ='var(--magnolia)';
-    this.style.border = '1px solid var(--purplish-blue)';
-
-    cardAdvanced.style.background = 'transparent';
-    cardAdvanced.style.border = '1px solid var(--light-gray)';
-    cardPro.style.background = 'transparent';
-    cardPro.style.border = '1px solid var(--light-gray)';
+    cardColor(cardArcade,'magnolia','purplish-blue');
+    cardColor(cardAdvanced,'white','light-gray');
+    cardColor(cardPro,'white','light-gray');
 });
 
 $('#card-advanced').click(function(){
-    this.style.background ='var(--magnolia)';
-    this.style.border = '1px solid var(--purplish-blue)';
-
-    cardArcade.style.background = 'transparent';
-    cardArcade.style.border = '1px solid var(--light-gray)';
-    cardPro.style.background = 'transparent';
-    cardPro.style.border = '1px solid var(--light-gray)';
+    cardColor(cardAdvanced,'magnolia','purplish-blue');
+    cardColor(cardArcade,'white','light-gray');
+    cardColor(cardPro,'white','light-gray');
 });
 
 $('#card-pro').click(function(){
-    this.style.background ='var(--magnolia)';
-    this.style.border = '1px solid var(--purplish-blue)';
-
-    cardArcade.style.background = 'transparent';
-    cardArcade.style.border = '1px solid var(--light-gray)';
-    cardAdvanced.style.background = 'transparent';
-    cardAdvanced.style.border = '1px solid var(--light-gray)';
+    cardColor(cardPro,'magnolia','purplish-blue');
+    cardColor(cardAdvanced,'white','light-gray');
+    cardColor(cardArcade,'white','light-gray');
 });
 
 
@@ -93,6 +85,18 @@ $('#btn-step3').click(function(){
     $('#step-4').show();
 
     btnColorsNext(stepNumber3,stepNumber4);
+});
+
+$('#check-service').click(function(){
+    cardColor(checkService,'magnolia','purplish-blue');
+});
+
+$('#check-storage').click(function(){
+    cardColor(checkStorage,'magnolia','purplish-blue');
+});
+
+$('#check-customizable').click(function(){
+    cardColor(checkCustomizable,'magnolia','purplish-blue');
 });
 
 $('#btn-back3').click(function(){
@@ -129,6 +133,11 @@ function btnColorsPrevious (previous,next){
     previous.style.color = 'var(--marine-blue)';
     next.style.background = 'transparent';
     next.style.color = 'var(--white)';
+}
+
+function cardColor(card,bgColor,brColor){
+    card.style.background = 'var(--'+bgColor+')';
+    card.style.border = '1px solid var(--'+brColor+')';
 }
 
 function showErrorEmail(email,id){
