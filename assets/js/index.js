@@ -1,7 +1,16 @@
 const errorEmpty = 'This field is required';
 const errorEmail = 'Valid email required';
+
 const stepNumber1 = document.getElementById('step-number-1');
 const stepNumber2 = document.getElementById('step-number-2');
+const stepNumber3 = document.getElementById('step-number-3');
+const stepNumber4 = document.getElementById('step-number-4');
+
+const cardArcade = document.getElementById('card-arcade');
+const cardAdvanced = document.getElementById('card-advanced');
+const cardPro = document.getElementById('card-pro');
+
+let cardSelected;
 
 $(document).ready(function(){
     stepNumber1.style.background = 'var(--light-blue)';
@@ -28,10 +37,7 @@ $('#btn-step1').click(function(){
     if(!errorName && !errorEmail && !errorPhone &&  !errorEmail2){
         $('#step-1').hide();
         $('#step-2').show();
-        stepNumber1.style.background = 'transparent';
-        stepNumber1.style.color = 'var(--white)';
-        stepNumber2.style.background = 'var(--light-blue)';
-        stepNumber2.style.color = 'var(--marine-blue)';
+        btnColorsNext(stepNumber1,stepNumber2);
     }
 });
 
@@ -39,13 +45,91 @@ $('#btn-step1').click(function(){
 $('#btn-back2').click(function(){
     $('#step-1').show();
     $('#step-2').hide();
-    stepNumber1.style.background = 'var(--light-blue)';
-    stepNumber1.style.color = 'var(--marine-blue)';
-    stepNumber2.style.background = 'transparent';
-    stepNumber2.style.color = 'var(--white)';
+
+    btnColorsPrevious(stepNumber1,stepNumber2);
+
+});
+
+$('#card-arcade').click(function(){
+    this.style.background ='var(--magnolia)';
+    this.style.border = '1px solid var(--purplish-blue)';
+
+    cardAdvanced.style.background = 'transparent';
+    cardAdvanced.style.border = '1px solid var(--light-gray)';
+    cardPro.style.background = 'transparent';
+    cardPro.style.border = '1px solid var(--light-gray)';
+});
+
+$('#card-advanced').click(function(){
+    this.style.background ='var(--magnolia)';
+    this.style.border = '1px solid var(--purplish-blue)';
+
+    cardArcade.style.background = 'transparent';
+    cardArcade.style.border = '1px solid var(--light-gray)';
+    cardPro.style.background = 'transparent';
+    cardPro.style.border = '1px solid var(--light-gray)';
+});
+
+$('#card-pro').click(function(){
+    this.style.background ='var(--magnolia)';
+    this.style.border = '1px solid var(--purplish-blue)';
+
+    cardArcade.style.background = 'transparent';
+    cardArcade.style.border = '1px solid var(--light-gray)';
+    cardAdvanced.style.background = 'transparent';
+    cardAdvanced.style.border = '1px solid var(--light-gray)';
 });
 
 
+$('#btn-step2').click(function(){
+    $('#step-2').hide();
+    $('#step-3').show();
+
+    btnColorsNext(stepNumber2,stepNumber3);
+});
+
+$('#btn-step3').click(function(){
+    $('#step-3').hide();
+    $('#step-4').show();
+
+    btnColorsNext(stepNumber3,stepNumber4);
+});
+
+$('#btn-back3').click(function(){
+    $('#step-2').show();
+    $('#step-3').hide();
+    btnColorsPrevious(stepNumber2,stepNumber3);
+});
+
+$('#btn-step4').click(function(){
+    $('#step-4').hide();
+    $('#step-5').show();
+})
+
+$('#btn-back4').click(function(){
+    $('#step-3').show();
+    $('#step-4').hide();
+    btnColorsPrevious(stepNumber3,stepNumber4);
+});
+
+$('#btn-confirm').click(function(){
+    $('#step-4').hide();
+    $('#step-5').show();
+})
+
+function btnColorsNext (previous,next){
+    previous.style.background = 'transparent';
+    previous.style.color = 'var(--white)';
+    next.style.background = 'var(--light-blue)';
+    next.style.color = 'var(--marine-blue)';
+}
+
+function btnColorsPrevious (previous,next){
+    previous.style.background = 'var(--light-blue)';
+    previous.style.color = 'var(--marine-blue)';
+    next.style.background = 'transparent';
+    next.style.color = 'var(--white)';
+}
 
 function showErrorEmail(email,id){
     if(!esEmail(email)){

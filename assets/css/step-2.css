@@ -18,6 +18,10 @@
     width: 120px;
 }
 
+.card:hover{
+    border: 1px solid var(--purplish-blue);
+}
+
 .card__img{
     width: 40px;
 }
