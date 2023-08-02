@@ -1,6 +1,10 @@
 .step-1{
     padding: 0rem 4rem;
 }
+
+.step__number{
+    font-weight: 700;
+}
 .step__title{
     color: var(--marine-blue);
     font-weight: 700;

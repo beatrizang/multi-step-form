@@ -1,14 +1,18 @@
 const errorEmpty = 'This field is required';
 const errorEmail = 'Valid email required';
+const stepNumber1 = document.getElementById('step-number-1');
+const stepNumber2 = document.getElementById('step-number-2');
 
 $(document).ready(function(){
+    stepNumber1.style.background = 'var(--light-blue)';
+    stepNumber1.style.color = 'var(--marine-blue)';
     $('#step-2').hide();
     $('#step-3').hide();
     $('#step-4').hide();
     $('#step-5').hide();
 });
 
-
+//BOTONES DE STEP 1
 $('#btn-step1').click(function(){
 
     let name = $('#form-name').val();
@@ -24,8 +28,24 @@ $('#btn-step1').click(function(){
     if(!errorName && !errorEmail && !errorPhone &&  !errorEmail2){
         $('#step-1').hide();
         $('#step-2').show();
+        stepNumber1.style.background = 'transparent';
+        stepNumber1.style.color = 'var(--white)';
+        stepNumber2.style.background = 'var(--light-blue)';
+        stepNumber2.style.color = 'var(--marine-blue)';
     }
 });
+
+//BOTONES DE STEP 2
+$('#btn-back2').click(function(){
+    $('#step-1').show();
+    $('#step-2').hide();
+    stepNumber1.style.background = 'var(--light-blue)';
+    stepNumber1.style.color = 'var(--marine-blue)';
+    stepNumber2.style.background = 'transparent';
+    stepNumber2.style.color = 'var(--white)';
+});
+
+
 
 function showErrorEmail(email,id){
     if(!esEmail(email)){
