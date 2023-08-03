@@ -1,3 +1,39 @@
 .step-4{
     padding: 0rem 4rem;
 }
+
+.price__box{
+    background: var(--magnolia);
+}
+
+.price__plan{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__plan__title{
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+.price__plan__link{
+    
+}
+
+.price__plan__price{
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+
+.addon{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__total{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
