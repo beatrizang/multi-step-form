@@ -11,8 +11,11 @@ const cardAdvanced = document.getElementById('card-advanced');
 const cardPro = document.getElementById('card-pro');
 
 const checkService = document.getElementById('check-service');
+const checkServiceInput = document.getElementById('check-service-input');
 const checkStorage = document.getElementById('check-storage');
+const checkStorageInput = document.getElementById('check-service-storage');
 const checkCustomizable = document.getElementById('check-customizable');
+const checkCustomizableInput = document.getElementById('check-service-customizable');
 
 let cardSelected;
 
@@ -88,15 +91,37 @@ $('#btn-step3').click(function(){
 });
 
 $('#check-service').click(function(){
-    cardColor(checkService,'magnolia','purplish-blue');
+    if(!checkServiceInput.checked){
+        cardColor(checkService,'magnolia','purplish-blue');
+        checkServiceInput.checked = true;
+    }
+    else{
+        cardColor(checkService,'white','light-gray');
+        checkServiceInput.checked = false;
+    }
+    
 });
 
 $('#check-storage').click(function(){
-    cardColor(checkStorage,'magnolia','purplish-blue');
+    if(!checkStorageInput.checked){
+        cardColor(checkStorage,'magnolia','purplish-blue');
+        checkStorageInput.checked = true;
+    }
+    else{
+        cardColor(checkStorage,'white','light-gray');
+        checkStorageInput.checked = false;
+    }
 });
 
 $('#check-customizable').click(function(){
-    cardColor(checkCustomizable,'magnolia','purplish-blue');
+    if(!checkCustomizableInput.checked){
+        cardColor(checkCustomizable,'magnolia','purplish-blue');
+        checkCustomizableInput.checked = true;
+    }
+    else{
+        cardColor(checkCustomizable,'white','light-gray');
+        checkCustomizableInput.checked = false;
+    }
 });
 
 $('#btn-back3').click(function(){
