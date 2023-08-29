@@ -18,8 +18,12 @@
 }
 
 body{
-    background: var(--pastel-blue);
+    align-items: center;
+    background: var(--magnolia);
     font-family: var(--ff-ubuntu);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 
 
