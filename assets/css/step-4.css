@@ -1,24 +1,37 @@
 .step-4{
     padding: 0rem 4rem;
+    width: 500px;
 }
 
 .price__box{
+    border-radius: 5px;
     background: var(--magnolia);
+    padding: 1rem;
 }
 
 .price__plan{
     align-items: center;
+    border-bottom: 1px solid var(--light-gray);
     display: flex;
     justify-content: space-between;
+    padding: 0 0 1rem 0;
 }
 
 .price__plan__title{
     color: var(--marine-blue);
     font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
 .price__plan__link{
-    
+    color: var(--cool-gray);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.price__plan__link:hover{
+    color: var(--purplish-blue);
 }
 
 .price__plan__price{
@@ -30,10 +43,39 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.addon__title{
+    color: var(--cool-gray);
+    font-weight: 500;
+}
+
+.addon__price{
+    color: var(--marine-blue);
 }
 
 .price__total{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+}
+
+.price__total__title{
+    color: var(--cool-gray);
+    font-weight: 500;
+}
+
+.price__total__price{
+    color: var(--purplish-blue);
+    font-weight: 700;
+}
+
+#btn-confirm{
+    background: var(--purplish-blue);
+}
+
+#btn-confirm:hover{
+    background: var(--lighter-purplish-blue);
 }
